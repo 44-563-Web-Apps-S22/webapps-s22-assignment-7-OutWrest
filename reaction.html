@@ -11,34 +11,49 @@
 </head>
 <body>
   <h1>Salah Abbas Reaction Timer</h1>
-  
-  <p id="target">Your time</p>
-  <p id="countdown">Count</p>
 
-  <button type="button" class="btn btn-primary" onclick="recordReact()">
+  <div>
+    <p id="target">Your time</p>
+    <p id="countdown">Count</p>
+  </div>
+
+  <button type="button" class="btn btn-primary" onclick="startTime()">
     Start Timer
   </button>
 
-  <button type="button" class="btn btn-primary" onclick="reactNow()">
+  <button type="button" class="btn btn-primary" onclick="recordReact()">
     React Now
   </button>
 
-  <script> 
+<script> 
   let myTime = undefined;
+  let buttonTime = undefined;
+  let elapsedTime = undefined;
 
   function recordReact() {
-    setTimeout(function() {
-      myTime = Date.now();
-      console.log(myTime);
-    }, 3000)
+    myTime = Date.now();
+    console.log(myTime);
   }
 
-  function buttonPress2() {
-    setTimeout(()=>{
-      document.getElementById('target').style.color = "red"
-    }, 3000)
+  function startTime() {
+    myTime = undefined;
+    for (let i = 0; i < 4; i++) {
+      setTimeout(function() {
+        document.getElementById('countdown').innerHTML = i;
+      }, (3-i) * 1000);
+    }
+    setTimeout(function() {
+      if (myTime === undefined) {
+        document.getElementById('target').innerHTML = "Too Slow";
+      } else {
+        buttonTime = Date.now();
+        elapsedTime = -(myTime - buttonTime);
+        document.getElementById('target').innerHTML = "Time was " + elapsedTime;
+      }
+    }, 3000);
   }
-  </script>
+
+</script>
 
 </body>
 </html>
