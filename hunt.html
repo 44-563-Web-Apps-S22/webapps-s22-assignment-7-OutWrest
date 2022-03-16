@@ -12,35 +12,6 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </head>
 
-<!-- <div class="container-fluid">
-  <h1>Responsive Columns</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
-  <div class="row">
-    <div class="col-sm-2" style="background-color:lavender;">.col-sm-2 this will span 2 columns and is contained inside a div element</div>
-    <div class="col-md-3" style="background-color:lavenderblush;">.col-md-3</div>
-    <div class="col-sm-2" style="background-color:lavender;">.col-sm-3</div>
-    <div class="col-sm-5" style="background-color:lavenderblush;">.col-sm-3</div>
-  </div>
-</div>
-
-<div class="container">
-  <button type="button" class="btn btn-success btn-sm">Success in all things is my goal</button>
-  <button type="button" class="btn btn-warning  btn-sm">Warning danger ahead</button>
-  <button type="button" class="btn btn-danger btn-sm">Danger, can still go back</button>
-  <button type="button" class="btn btn-link btn-sm">Link to the secret of life</button>
-  </div> -->
-
-  <!-- Find three images that are close to square in size
-  a. The first image will be the starting image and should be something that is a
-  plant, tree, bush… anything that could conceal a bird.
-  b. The second image will be one of your bird images.
-  c. The third image will be something that is not a bird, like an empty nest or a
-  branch.
-  2) Create the 5 rows using divs as the containers.
-  3) In each row add 5 divs to hold our search locations.
-  4) In each location put in the starting image. -->
-
 <body>
   <h1>Bird hunt Salah Abbas</h1>
   <div class="container-fluid">
@@ -50,40 +21,90 @@
   </div>
 
   <div class="row">
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im0" onclick="check(0)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im1" onclick="check(1)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im2" onclick="check(2)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im3" onclick="check(3)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im4" onclick="check(4)"></div>
   </div>
   <div class="row">
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im5" onclick="check(5)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im6" onclick="check(6)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im7" onclick="check(7)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im8" onclick="check(8)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im9" onclick="check(9)"></div>
   </div>
   <div class="row">
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im10" onclick="check(10)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im11" onclick="check(11)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im12" onclick="check(12)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im13" onclick="check(13)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im14" onclick="check(14)"></div>
   </div>
   <div class="row">
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im15" onclick="check(15)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im16" onclick="check(16)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im17" onclick="check(17)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im18" onclick="check(18)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im19" onclick="check(19)"></div>
   </div>
   <div class="row">
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
-    <div class="col-md-2"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im20" onclick="check(20)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im21" onclick="check(21)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im22" onclick="check(22)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im23" onclick="check(23)"></div>
+    <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im24" onclick="check(24)"></div>
   </div>
 
 </body>
+
+<script>
+  let ids = [];
+  for (let i = 0; i < 25; i++) {
+    ids[i] = "im" + i;
+  }
+
+  let shakeCount = 0;
+  let birdLocation = 18;
+
+  function locationScore(pos1, pos2) {
+    let score = 0;
+    
+    // Check if the two positions are in the same row
+    if (pos1 % 5 === pos2 % 5) {
+      score += 1;
+    }
+
+    // Check if the two positions are in the same column
+    if (Math.floor(pos1 / 5) === Math.floor(pos2 / 5)) {
+      score += 1;
+    }
+
+    // Check if the two positions are diagonally adjacent
+    if (Math.abs(pos1 - pos2) === 6 || Math.abs(pos1 - pos2) === 8) {
+      score += 1;
+    }
+
+    if (score > 1) {
+      score = 1;
+    }
+
+    return score;
+  }
+
+  function check(position) {
+    let image = document.getElementById(ids[position]);
+    if (position == birdLocation) {
+      image.src = "assets/bird.jpg";
+    } else {
+      image.src = "assets/forest.jpg";
+    }
+    shakeCount++;
+    document.getElementById("shakes").innerHTML = "Shakes: " + shakeCount;
+    document.getElementById("score").innerHTML = "Score: " + locationScore(position, birdLocation);
+  }
+
+</script>
+
+
 </html>
