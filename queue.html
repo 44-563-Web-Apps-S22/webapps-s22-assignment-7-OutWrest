@@ -29,7 +29,7 @@
 		<div class="queue">row item 2</div>  
 		<div class="queue">row item 3</div>  
 	</div>
-	
+
 	<hr>
 
 	<label for="input">Add value:</label>
@@ -37,7 +37,7 @@
 	<button onclick="appendToQueue()">Add value</button>
 	<button onclick="fetchItem()">Fetch</button>
 	<button onclick="zap()">Zap values</button>
-
+	<button onclick="removeDuplicates()">Unique</button>
 	
 </body>
 <script>
@@ -70,6 +70,29 @@
 				item.remove();
 				console.log(item);
 			}
+		}
+	}
+
+	function removeDuplicates() {
+		let queueItems = document.getElementsByClassName("queue");
+		let toRemove = [];
+		let unique = [];
+
+		for (let i = 0; i < queueItems.length; i++) {
+			if (unique.indexOf(queueItems[i].innerHTML) != -1) {
+				toRemove.push(i);
+			}
+			else {
+				unique.push(queueItems[i].innerHTML);
+			}
+		}
+
+		// reverse the array so we can remove from the end
+		toRemove.reverse();
+		
+		for (let i = 0; i < toRemove.length; i++) {
+			// remove from highest index to lowest to avoid index issues
+			queueItems[toRemove[i]].remove();
 		}
 	}
 </script>
