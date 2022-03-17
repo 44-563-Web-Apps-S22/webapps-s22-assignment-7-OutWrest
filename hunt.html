@@ -20,6 +20,8 @@
     <p id="score">Location score is unknown.</p>
   </div>
 
+  <button type="button" class="btn btn-primary" onclick="newGame()">New Game</button>
+
   <div class="row">
     <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im0" onclick="check(0)"></div>
     <div class="col-md-1"><img src="assets/forest.jpg" alt="Forest" class="img-fluid" width="200" height="200" id="im1" onclick="check(1)"></div>
@@ -102,6 +104,17 @@
     shakeCount++;
     document.getElementById("shakes").innerHTML = "Shakes: " + shakeCount;
     document.getElementById("score").innerHTML = "Score: " + locationScore(position, birdLocation);
+  }
+
+  function newGame() {
+    birdLocation = Math.floor(Math.random() * 25);
+    for (let i = 0; i < 25; i++) {
+      // reset forest
+      document.getElementById(ids[i]).src = "assets/forest.jpg";
+    }
+    shakeCount = 0;
+    document.getElementById("shakes").innerHTML = "Number of shakes is zero.";
+    document.getElementById("score").innerHTML = "Location score is unknown.";
   }
 
 </script>
