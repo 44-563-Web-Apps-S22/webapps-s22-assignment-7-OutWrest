@@ -29,46 +29,6 @@
 		<div class="queue">row item 2</div>  
 		<div class="queue">row item 3</div>  
 	</div>
-	<!--
-	Pick a descriptive title and for the header use your name followed by “ builds a
-	reversed queue”.
-	3) You will need an input element of type text
-	4) You already have a button with the name “Add One”. Change it to “Add value”.
-	5) You already have a div flex-container that will hold the divs.
-	6) We need to make a few changes to the behavior of adding to the end of the flex
-	container.
-	a. For each of the starting div inside the flex container, add a class property of
-	“queue”.
-	b. After you create the new div element. Get the value from the input element.
-	c. Set the innerHTML of the new element to the value from the input.
-	d. Set the className property of the new element to “queue”.
-	e. Append child with the container is already there, so try it out.
-	7) Every time you press the button you should get a new element with text from the
-	input.
-	8) Fix it so that we add at the front instead of the end
-	a. Change appendChild to insertBefore
-	b. The first argument is the element you created (as before)
-	c. The second argument is container.firstChild.
-	9) Every time you press the button now, you should get a div at the front.
-	10) Commit and Push.
-	Part 8: Implement Fetch and Zap.
-	1) Add two buttons with text “Fetch” and “Zap values.”
-	2) Define a function fetchItem() and associate it with the onclick for the fetch button.
-	3) We are going to remove the last element in the queue. First use
-	getElementsByClassname(“queue”) to get an array like thing that has all the
-	elements in the document with a class of “queue”. Assign it to a variable
-	queueItems
-	4) Get the length of queueItems. If the length is greater than 0, we will remove the last
-	item from the flex container using queueItems[].remove(), with the index of the last
-	item in the [].
-	5) Define a function zap() and associate it with the zap values button.
-	6) Get the elements by class name “queue”.
-	7) Get the value from the input element.
-	8) Use a for-of loop on the queueItems. If the item has the same innerHTML as the
-	value of the input, remove the item and log it to the console. (We are getting rid of
-	all elements with that text.)
-
-	-->
 	
 	<hr>
 
@@ -90,6 +50,27 @@
 
 		let container = document.getElementById("target");
 		container.insertBefore(element, container.firstChild);
+	}
+
+	function fetchItem() {
+		let queueItems = document.getElementsByClassName("queue");
+		let length = queueItems.length;
+
+		if (length > 0) {
+			queueItems[length - 1].remove();
+		}
+	}
+
+	function zap() {
+		let queueItems = document.getElementsByClassName("queue");
+		let input = document.getElementById("input").value;
+
+		for (let item of queueItems) {
+			if (item.innerHTML == input) {
+				item.remove();
+				console.log(item);
+			}
+		}
 	}
 </script>
 </html>	
