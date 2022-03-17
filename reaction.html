@@ -37,10 +37,13 @@
 
   function startTime() {
     myTime = undefined;
-    for (let i = 0; i < 4; i++) {
+
+    let timerNumber = Math.floor(Math.random() * 8) + 2; 
+
+    for (let i = 0; i < timerNumber + 1; i++) {
       setTimeout(function() {
         document.getElementById('countdown').innerHTML = i;
-      }, (3-i) * 1000);
+      }, (timerNumber-i) * 1000);
     }
     setTimeout(function() {
       if (myTime === undefined) {
@@ -50,7 +53,7 @@
         elapsedTime = -(myTime - buttonTime);
         document.getElementById('target').innerHTML = "Time was " + elapsedTime;
       }
-    }, 3000);
+    }, timerNumber * 1000);
   }
 
 </script>
